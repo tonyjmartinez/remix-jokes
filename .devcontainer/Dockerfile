@@ -15,5 +15,5 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 # [Optional] Uncomment if you want to install more global node packages
 # RUN su node -c "npm install -g <your-package-list -here>"
 
-RUN SNIPPET="alias gs='git status'"" \
+RUN SNIPPET="alias gs='git status'" \
     && echo $SNIPPET >> "/home/node/.bashrc"
