@@ -11,6 +11,9 @@
       "VARIANT": "16-bullseye"
     }
   },
+  "remoteEnv": {
+    "PATH":"${containerEnv:PATH}:/home/node/.fly/bin"
+  },
 
   // Set *default* container specific settings.json values on container create.
   "settings": {},
@@ -22,7 +25,7 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "yarn install",
+  "postCreateCommand": "yarn install && curl -L https://fly.io/install.sh | sh",
 
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "node"
